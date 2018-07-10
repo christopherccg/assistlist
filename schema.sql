@@ -13,8 +13,7 @@ create table user (
 	created_at datetime
 );
 
-insert into user (username,password,is_admin,created_at) value ("admin",sha1(md5("admin")),1,NOW());
-
+INSERT INTO `user` (`id`, `username`, `name`, `lastname`, `email`, `password`, `is_active`, `is_admin`, `created_at`) VALUES (NULL, 'admin', '', '', '', SHA1(MD5('admin')), '1', '1', NOW());
 
 create table person(
 	id int not null auto_increment primary key,
